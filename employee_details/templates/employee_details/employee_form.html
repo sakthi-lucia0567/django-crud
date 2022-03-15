@@ -1,0 +1,13 @@
+{% extends "employee_details/base.html" %} {% block content %}
+<form action="" method="post" autocomplete="off">
+    {% csrf_token %}
+    <div class="row">
+        {{form}}
+    </div>
+    <br>
+    <button type="submit" class="btn btn-success">
+      <i class="fas fa-database"></i>  Submit</button>
+    <a href="{% url 'employee_list' %}" class="btn btn-success">
+        <i class="fas fa-stream"></i> Back to list </a>
+</form>
+{% endblock content %}
